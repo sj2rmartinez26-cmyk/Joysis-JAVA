@@ -12,6 +12,7 @@ package day9.activity;
 public class Activity5_2_Martinez {
     public static void main(String[] args) {
           //Activity 5.2
+          System.out.println("Activity 5.2");
         int product = 1;
         
         for (int i = 1; i<=5; i++){

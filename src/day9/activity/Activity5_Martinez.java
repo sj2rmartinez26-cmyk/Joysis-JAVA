@@ -13,7 +13,6 @@ public class Activity5_Martinez {
             System.out.println("i = "+ i + ", sum = " + sum);
         }
         
-        System.out.println("\nActivity 5.2");
         
         
     }
