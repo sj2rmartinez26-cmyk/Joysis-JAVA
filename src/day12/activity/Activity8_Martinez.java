@@ -11,12 +11,12 @@ public class Activity8_Martinez {
         int numStudents = scanner.nextInt(); 
         System.out.print("Enter Number of Subject(s): ");
         int numSubjects = scanner.nextInt();
-        scanner.nextLine(); // Clear buffer
+        scanner.nextLine(); 
         
         String[] subjects = new String [numSubjects];
         String[] students = new String [numStudents];
         
-        // Structure: [studentIndex][subjectIndex][0 = Subject Name, 1 = Grade]
+        
         String[][][] studentsTable = new String [numStudents][numSubjects][2];
        
         System.out.println("\nEnter Student Names");
@@ -42,34 +42,34 @@ public class Activity8_Martinez {
             } 
         }
         
-        // --- DISPLAY DATA IN A TABLE LAYOUT WITH AVERAGE ---
+        
         System.out.println("\n=================================== STUDENT GRADES SUMMARY ===================================");
         
-        // Print Header Row (Student Name followed by all the subjects + Grade Average)
+       
         System.out.printf("%-15s", "Student Name");
         for (int i = 0; i < numSubjects; i++) {
             System.out.printf("%-15s", subjects[i]);
         }
-        System.out.printf("%-15s\n", "Grade Average"); // New column header
+        System.out.printf("%-15s\n", "Grade Average"); 
         System.out.println("----------------------------------------------------------------------------------------------");
         
-        // Print Data Rows pulling values directly out of your studentsTable
+        
         for (int j = 0; j < numStudents; j++) {
-            System.out.printf("%-15s", students[j]); // Print Student Name
+            System.out.printf("%-15s", students[j]); 
             
-            double totalGradeSum = 0.0; // Variable to accumulate the sum for the current student
+            double totalGradeSum = 0.0; 
             
             for (int i = 0; i < numSubjects; i++) {
                 double gradeValue = Double.parseDouble(studentsTable[j][i][1]);
                 System.out.printf("%-15.2f", gradeValue); 
                 
-                totalGradeSum += gradeValue; // Add each grade to the running total
+                totalGradeSum += gradeValue; 
             }
             
-            // Calculate the average for the current student
+           
             double gradeAverage = totalGradeSum / numSubjects;
             
-            // Print the final average in its respective column
+            
             System.out.printf("%-15.2f\n", gradeAverage); 
         }
         System.out.println("==============================================================================================");
